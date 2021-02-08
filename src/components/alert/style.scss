@@ -1,0 +1,26 @@
+.alertContainer {
+    background-color: #58ad58;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    padding: 10px 20px;
+    width: 300px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    transform: translateY(-50px);
+    animation: slideDown 2.5s 1 ease forwards;
+}
+
+.delete {
+    background-color: #d9544f;
+}
+
+@keyframes slideDown {
+    0%, 100% { transform: translateY(-50px); }
+    10%, 90% { transform: translateY(0px); }
+}

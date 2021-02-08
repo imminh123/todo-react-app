@@ -1,0 +1,53 @@
+.todoItem {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    
+    .briefContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 10px;
+
+        .leftContainer {
+            display: flex;
+            align-items: center;
+
+            input {
+                margin-right: 12px;
+            }
+        }
+
+        .actionContainer {
+            .detailBtn {
+                margin-right: 15px;
+            }
+        } 
+    }
+
+    .detailContainer {
+        margin-top: 15px;
+        padding: 20px 18px;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+        .dropdownBox {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .priorityBox, .calendarBox {
+                width: 100%;
+            }
+
+            .priorityBox {
+                margin-left: 20px;
+            }
+            
+        }
+
+        .updateBtn {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    
+}

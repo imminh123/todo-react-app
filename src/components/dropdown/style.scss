@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.dropdownContainer {
+  width: 100%;
+  .selected-item {
+    text-align: center;
+    p {
+      font-size: 18px;  
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  /* dropdown list */
+  .dropdown {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    &.active {
+      .selLabel {
+        &:after {
+          content: "\25B2";
+        }
+      }
+      .dropdown-list {
+        li {
+          &:nth-child(1) {
+            transform: translateY(100%);
+          }
+          &:nth-child(2) {
+            transform: translateY(200%);
+          }
+          &:nth-child(3) {
+            transform: translateY(300%);
+          }
+        }
+      }
+    }
+    > span {
+      width: 100%;
+      color: #333;
+      font-size: 16px;
+      background: #fff;
+      display: block;
+      padding: 9px 10px;
+      position: relative;
+      z-index: 9999;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform-origin: 50% 0%;
+      transition: transform 300ms;
+  
+      &:after {
+        content: "\25BC";
+        position: absolute;
+        right: 0px;
+        top: 14%;
+        width: 50px;
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        border-left: 1px solid #ddd;
+      }
+      &:active {
+        &:after {
+          content: "\25B2";
+        }
+      }
+    }
+  }
+  .dropdown-list {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    li {
+      list-style: none;
+      left: 0;
+      opacity: 1;
+      transition: transform 300ms ease;
+  
+      position: absolute;
+      top: 0;
+      width: 100%;
+    
+      span {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        width: 100%;
+        font-size: 16px;
+        padding: 8.5px 20px;
+        display: block;
+        color: #333;
+        cursor: pointer;
+      }
+    }
+  }
+  
+}
